@@ -1,26 +1,20 @@
-#include <iostream>
+#ifndef JUGADOR_H
+#define JUGADOR_H
 
-using namespace std;
+#include "persona.h"
 
-class jugador {
-    
-    private:
-        // Datos del jugador
-        string nombre;
-        string apellidos;
-        string nacionalidad;
-        string posicion;
-    
-    public:
-        // Constructor
-        jugador();
+class jugador : public persona { // Heredar de la clase persona
+private:
+    std::string posicion;
 
-        // Métodos para establecer los datos del jugador
-        string getNombre();
-        string getApellidos();
-        string getNacionalidad();
-        string getPosicion();
+public:
+    // Constructor
+    jugador();
 
-        // Métodos para obtener los datos del jugador
-        void imprimeDatos();
+    // Métodos específicos para jugador
+    void setPosicion(std::string posicion);
+    std::string getPosicion();
+    void imprimeDatos();
 };
+
+#endif /* JUGADOR_H */
