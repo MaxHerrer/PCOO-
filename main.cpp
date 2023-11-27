@@ -3,35 +3,45 @@
 #include "jugador.h"
 #include "equipo.h"
 #include "entrenador.h"
+#include "persona.h"
 
-jugador::jugador() {}
-
-void jugador::setNombre(std::string nombre) {
+void persona::setNombre(std::string nombre) {
     this->nombre = nombre;
 }
 
-void jugador::setApellidos(std::string apellidos) {
+void persona::setApellidos(std::string apellidos) {
     this->apellidos = apellidos;
 }
 
-void jugador::setNacionalidad(std::string nacionalidad) {
+void persona::setNacionalidad(std::string nacionalidad) {
     this->nacionalidad = nacionalidad;
 }
 
-void jugador::setPosicion(std::string posicion) {
-    this->posicion = posicion;
-}
-
-std::string jugador::getNombre() {
+std::string persona::getNombre() {
     return nombre;
 }
 
-std::string jugador::getApellidos() {
+std::string persona::getApellidos() {
     return apellidos;
 }
 
-std::string jugador::getNacionalidad() {
+std::string persona::getNacionalidad() {
     return nacionalidad;
+}
+
+void equipo::imprimeDatos() {
+    std::cout << "Nombre: " << nombre << std::endl;
+    std::cout << "País: " << pais << std::endl;
+    std::cout << "Ciudad: " << ciudad << std::endl;
+
+}
+
+// Implementación de los métodos de jugador
+
+jugador::jugador() {}
+
+void jugador::setPosicion(std::string posicion) {
+    this->posicion = posicion;
 }
 
 std::string jugador::getPosicion() {
@@ -43,6 +53,16 @@ void jugador::imprimeDatos() {
     std::cout << "Apellidos: " << apellidos << std::endl;
     std::cout << "Nacionalidad: " << nacionalidad << std::endl;
     std::cout << "Posición: " << posicion << std::endl;
+}
+
+// Implementación de los métodos de entrenador
+
+entrenador::entrenador() {}
+
+void entrenador::imprimeDatos() {
+    std::cout << "Nombre: " << nombre << std::endl;
+    std::cout << "Apellidos: " << apellidos << std::endl;
+    std::cout << "Nacionalidad: " << nacionalidad << std::endl;
 }
 
 equipo::equipo() {}
@@ -77,45 +97,6 @@ std::string equipo::getCiudad() {
 
 std::string equipo::getDivision() {
     return division;
-}
-
-void equipo::imprimeDatos() {
-    std::cout << "Nombre: " << nombre << std::endl;
-    std::cout << "País: " << pais << std::endl;
-    std::cout << "Ciudad: " << ciudad << std::endl;
-    std::cout << "División: " << division << std::endl;
-}
-
-entrenador::entrenador(){}
-
-void entrenador::setNombre(std::string nombre) {
-    this->nombre = nombre;
-}
-
-void entrenador::setApellidos(std::string apellidos) {
-    this->apellidos = apellidos;
-}
-
-void entrenador::setNacionalidad(std::string nacionalidad) {
-    this->nacionalidad = nacionalidad;
-}
-
-std::string entrenador::getNombre() {
-    return nombre;
-}
-
-std::string entrenador::getApellidos() {
-    return apellidos;
-}
-
-std::string entrenador::getNacionalidad() {
-    return nacionalidad;
-}
-
-void entrenador::imprimeDatos() {
-    std::cout << "Nombre: " << nombre << std::endl;
-    std::cout << "Apellidos: " << apellidos << std::endl;
-    std::cout << "Nacionalidad: " << nacionalidad << std::endl;
 }
 
 int main() {
@@ -193,6 +174,3 @@ int main() {
 
     return 0;
 }
-
-}
-
