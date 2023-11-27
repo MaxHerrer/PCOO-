@@ -1,24 +1,26 @@
-#include <iostream>
+#ifndef ENTRENADOR_H
+#define ENTRENADOR_H
 
-using namespace std;
+#include <iostream>
+#include <string>
 
 class entrenador {
-    
-    private:
-        // Datos del entrenador
-        string nombre;
-        string apellidos;
-        string nacionalidad;
-    
-    public:
-        // Constructor
-        entrenador();
+private:
+    std::string nombre;
+    std::string apellidos;
+    std::string nacionalidad;
 
-        // Métodos para establecer los datos del entrenador
-        string getNombre();
-        string getApellidos();
-        string getNacionalidad();
-
-        // Métodos para obtener los datos del entrenador
-        void imprimeDatos();
+public:
+    // Constructor
+    entrenador();
+    // Métodos para establecer y obtener datos del entrenador
+    void setNombre(std::string nombre);
+    void setApellidos(std::string apellidos);
+    void setNacionalidad(std::string nacionalidad);
+    std::string getNombre();
+    std::string getApellidos();
+    std::string getNacionalidad();
+    void imprimeDatos();
 };
+
+#endif /* ENTRENADOR_H */
