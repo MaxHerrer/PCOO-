@@ -1,26 +1,29 @@
-#include <iostream>
+#ifndef EQUIPO_H
+#define EQUIPO_H
 
-using namespace std;
+#include <iostream>
+#include <string>
 
 class equipo {
-    
-    private:
-        // Datos del equipo
-        string nombre;
-        string pais;
-        string ciudad;
-        string division;
-    
-    public:
-        // Constructor
-        equipo();
+private:
+    std::string nombre;
+    std::string pais;
+    std::string ciudad;
+    std::string division;
 
-        // Métodos para establecer los datos del equipo
-        string getNombre();
-        string getPais();
-        string getCiudad();
-        string getDivision();
-
-        // Métodos para obtener los datos del equipo
-        void imprimeDatos();
+public:
+    // Constructor
+    equipo();
+    // Métodos para establecer y obtener datos del equipo
+    void setNombre(std::string nombre);
+    void setPais(std::string pais);
+    void setCiudad(std::string ciudad);
+    void setDivision(std::string division);
+    std::string getNombre();
+    std::string getPais();
+    std::string getCiudad();
+    std::string getDivision();
+    void imprimeDatos();
 };
+
+#endif /* EQUIPO_H */
