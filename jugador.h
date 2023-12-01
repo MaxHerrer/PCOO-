@@ -1,20 +1,41 @@
 #ifndef JUGADOR_H
 #define JUGADOR_H
 
-#include "persona.h"
+#include "Persona.h"
+#include <iostream>
+#include <string>
 
-class jugador : public persona { // Heredar de la clase persona
+class Jugador : public Persona { 
 private:
     std::string posicion;
 
 public:
     // Constructor
-    jugador();
+    Jugador();
 
     // Métodos específicos para jugador
     void setPosicion(std::string posicion);
     std::string getPosicion();
     void imprimeDatos();
 };
+
+// Implementación de los métodos de jugador
+
+Jugador::Jugador() {}
+
+void Jugador::setPosicion(std::string posicion) {
+    this->posicion = posicion;
+}
+
+std::string Jugador::getPosicion() {
+    return posicion;
+}
+
+void Jugador::imprimeDatos() {
+    std::cout << "Nombre: " << nombre << std::endl;
+    std::cout << "Apellidos: " << apellidos << std::endl;
+    std::cout << "Nacionalidad: " << nacionalidad << std::endl;
+    std::cout << "Posición: " << posicion << std::endl;
+}
 
 #endif /* JUGADOR_H */
