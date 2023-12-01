@@ -12,7 +12,7 @@ public:
     // Constructor
     Entrenador();
 
-    // Método para establecer y obtener datos del entrenador agregar un atributo
+    // Métodos específicos para entrenador
     void setGanados(std::string ganados);
     std::string getGanados();
     void imprimeDatos();
