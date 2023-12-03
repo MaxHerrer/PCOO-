@@ -49,7 +49,7 @@ int main() {
     miEquipo.setPais(paisEquipo);
     miEquipo.setCiudad(ciudadEquipo);
     miEquipo.setDivision(divisionEquipo);
-  
+
     // Imprimir los datos del equipo
     std::cout << "\nDatos del equipo:" << std::endl;
     miEquipo.imprimeDatos();
@@ -70,10 +70,10 @@ int main() {
 
     // Establecer los datos del entrenador con los valores ingresados por el usuario
     miEntrenador.setNombre(nombreEntrenador);
-    miEntrenador.setApellidos(apellidosEntrenador); 
+    miEntrenador.setApellidos(apellidosEntrenador);
     miEntrenador.setNacionalidad(nacionalidadEntrenador);
     miEntrenador.setGanados(ganadosEntrenador);
-  
+
     // Imprimir los datos del entrenador
     std::cout << "\nDatos del entrenador:" << std::endl;
     miEntrenador.imprimeDatos();
