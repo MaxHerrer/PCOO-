@@ -5,7 +5,7 @@
 #include <string>
 
 class Persona {
-protected: 
+protected:
     std::string nombre;
     std::string apellidos;
     std::string nacionalidad;
@@ -18,13 +18,16 @@ public:
     void setNombre(std::string nombre);
     void setApellidos(std::string apellidos);
     void setNacionalidad(std::string nacionalidad);
+
     std::string getNombre();
     std::string getApellidos();
     std::string getNacionalidad();
-    void imprimeDatos();
+
 };
 
-// Implementación de los métodos de persona
+// Implementación del constructor y funciones
+Persona::Persona() {}
+
 void Persona::setNombre(std::string nombre) {
     this->nombre = nombre;
 }
@@ -37,13 +40,14 @@ void Persona::setNacionalidad(std::string nacionalidad) {
     this->nacionalidad = nacionalidad;
 }
 
+
 std::string Persona::getNombre() {
     return nombre;
 }
 
 std::string Persona::getApellidos() {
     return apellidos;
-}  
+}
 
 std::string Persona::getNacionalidad() {
     return nacionalidad;
