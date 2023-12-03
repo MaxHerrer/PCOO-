@@ -14,8 +14,9 @@ public:
     Jugador();
 
     // Métodos específicos para jugador
-    void setPosicion(std::string posicion);
     std::string getPosicion();
+    void setPosicion(std::string posicion);
+
     void imprimeDatos();
 };
 
