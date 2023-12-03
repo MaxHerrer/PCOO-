@@ -67,6 +67,7 @@ void Equipo::imprimeDatos() {
     std::cout << "Nombre: " << nombre << std::endl;
     std::cout << "País: " << pais << std::endl;
     std::cout << "Ciudad: " << ciudad << std::endl;
+    std::cout << "Division: " << division << std::endl;
 
 }
 
