@@ -34,6 +34,7 @@ void Entrenador::imprimeDatos() {
     std::cout << "Nombre: " << nombre << std::endl;
     std::cout << "Apellidos: " << apellidos << std::endl;
     std::cout << "Nacionalidad: " << nacionalidad << std::endl;
+    std::cout << "Ganados: " << ganados << std::endl;
 }
 
 #endif /* ENTRENADOR_H */
